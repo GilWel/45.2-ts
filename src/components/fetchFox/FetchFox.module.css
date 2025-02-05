@@ -1,0 +1,14 @@
+.foxWraper {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border: 4px dashed orange;
+  margin-bottom: 15px;
+
+}
+
+.foxWraper>img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

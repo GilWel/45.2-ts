@@ -1,0 +1,19 @@
+.heading {
+    font-size: 35px;
+    color: rgb(0, 140, 255);
+}
+.desc {
+    font-style: italic;
+}
+.textGreen{
+    color:green;
+}
+.list{
+    list-style: none;
+
+}
+.list > li::before {
+    content: '⚡';
+    cursor: not-allowed;
+    color: rgb(124.124.124);
+}
