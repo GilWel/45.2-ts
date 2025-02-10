@@ -1,17 +1,20 @@
-  .linkActive {
-    display:block;
-    padding: 8px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1.1rem;
-    margin: 5px;
-  }
-  
-  .linkActive:hover {
-    background-color: #0056b3;
-  }
-  
- 
+.lessonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Два столбца */
+  gap: 10px; /* Промежуток между колонками */
+}
+
+
+.linkActive {
+  padding: 8px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.linkActive:hover {
+  background-color: #0056b3;
+}
