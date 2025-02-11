@@ -24,6 +24,8 @@ import SpaceMission from "./spaceMission/SpaceMission";
 import Counter from "./components/counter/Counter";
 import ShowDate from "./components/ShowDate/ShowDate";
 import Lesson11 from "./lessons/lesson11/Lesson11";
+import Lesson12 from "./lessons/lesson12/Lesson12";
+import FormGende from "./components/formGende/FormGende";
 // import FetchFox from "./components/fetchFox/FetchFox";
 // import Lesson09 from './lessons/lesson09/Lesson09';
 // import ShowDate from './components/ShowDate/ShowDate
@@ -56,11 +58,12 @@ function App() {
           <Route path="lesson08" element={<Lesson08/>} />
           <Route path="lesson09" element={<Lesson09/>} />
           <Route path="lesson11" element={<Lesson11/>} />
+          <Route path="lesson12" element={<Lesson12/>} />
           {/* <Route path="Homework01" element={<Homework01/>} /> */}
           <Route path="Homework02" element={<Homework02/>} />
           <Route path="Homework03" element={<Homework03/>} />
           <Route path="Homework04" element={<Homework04/>} />
-
+          <Route path="FormGende" element={<FormGende/>} />
           <Route path="*" element={<NoPage />} />
 
           {/* <Lesson06/> */}

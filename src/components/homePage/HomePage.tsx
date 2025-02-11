@@ -59,9 +59,14 @@ export default function HomePage() {
       <Link className={styles.linkActive} to={"Lesson11"}>
         lesson11
       </Link>
-
-      <Link className={styles.linkActive} to={"Homework04"}>
-        Homework04
+      <Link className={styles.linkActive} to={"Lesson04"}>
+        Lesson04
+      </Link>
+      <Link className={styles.linkActive} to={"Lesson12"}>
+      Lesson12
+      </Link>
+      <Link className={styles.linkActive} to={"FormGende"}>
+      FormGende
       </Link>
     </div>
   );
