@@ -30,6 +30,7 @@
 }
 
 .main {
+  width: 50%;
   flex: 1;
 }
 
