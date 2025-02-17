@@ -25,7 +25,10 @@ import Counter from "./components/counter/Counter";
 import ShowDate from "./components/ShowDate/ShowDate";
 import Lesson11 from "./lessons/lesson11/Lesson11";
 import Lesson12 from "./lessons/lesson12/Lesson12";
-import FormGende from "./components/formGende/FormGende";
+import FormGender from "./components/formGender/FormGender";
+import Lesson13 from "./lessons/lesson13/Lesson13";
+import RegisterSchema from "./components/registerSchema/RegisterSchema";
+import LoginSchema from "./components/loginSchema/LoginSchema";
 // import FetchFox from "./components/fetchFox/FetchFox";
 // import Lesson09 from './lessons/lesson09/Lesson09';
 // import ShowDate from './components/ShowDate/ShowDate
@@ -59,11 +62,14 @@ function App() {
           <Route path="lesson09" element={<Lesson09/>} />
           <Route path="lesson11" element={<Lesson11/>} />
           <Route path="lesson12" element={<Lesson12/>} />
+          <Route path="lesson13" element={<Lesson13/>} />
           {/* <Route path="Homework01" element={<Homework01/>} /> */}
           <Route path="Homework02" element={<Homework02/>} />
           <Route path="Homework03" element={<Homework03/>} />
           <Route path="Homework04" element={<Homework04/>} />
-          <Route path="FormGende" element={<FormGende/>} />
+          <Route path="FormGender" element={<FormGender/>} />
+          <Route path="RegisterSchema" element={<RegisterSchema/>} />
+          <Route path="LoginSchema" element={<LoginSchema/>} />
           <Route path="*" element={<NoPage />} />
 
           {/* <Lesson06/> */}
