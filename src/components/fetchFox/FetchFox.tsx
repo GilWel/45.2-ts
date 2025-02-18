@@ -25,7 +25,7 @@ export default function FetchFox(): JSX.Element {
   }, []);
 
   return (
-    <div>
+    <div className={styles.container}>
 
       
       {isLoading ? (

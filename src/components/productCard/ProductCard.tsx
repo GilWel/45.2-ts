@@ -13,7 +13,7 @@ export default function ProductCard({title,image,id,price}: IProductCardProps): 
   return (
     <div className={styles.productCard}>
       <h4>{title.length < 30 ? title:title.slice(0,30)+'...'}</h4>
-      <p>Price: {price}</p>
+      <p>Price: {price}€</p>
       <div>
         <img src={image} alt="bild" />
       </div>
