@@ -49,7 +49,7 @@ export default function Lesson12(): JSX.Element {
   });
   return (
     <div className={styles.formContainer}>
-      <h2>Lesson12: Formik 🧧</h2>
+      <h2>Lesson12: Formik 📝</h2>
       <form onSubmit={formik.handleSubmit} className={styles.form}>
         <input
           value={formik.values.firstname}

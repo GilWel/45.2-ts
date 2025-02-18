@@ -59,8 +59,8 @@ export default function HomePage() {
       <Link className={styles.linkActive} to={"Lesson11"}>
         lesson11
       </Link>
-      <Link className={styles.linkActive} to={"Lesson04"}>
-        Lesson04
+      <Link className={styles.linkActive} to={" Homework04"}>
+        Homework04
       </Link>
       <Link className={styles.linkActive} to={"Lesson12"}>
       Lesson12
@@ -73,6 +73,9 @@ export default function HomePage() {
       </Link>
       <Link className={styles.linkActive} to={"RegisterSchema"}>
       RegisterSchema
+        </Link>
+      <Link className={styles.linkActive} to={"Lesson14"}>
+      Lesson14    
       </Link>
       <Link className={styles.linkActive} to={"LoginSchema"}>
       LoginSchema

@@ -1,4 +1,6 @@
+
 .foxWraper {
+ 
   width: 350px;
   height: 350px;
   overflow: hidden;
@@ -8,6 +10,7 @@
 }
 
 .foxWraper>img {
+  
   height: 100%;
   width: 100%;
   object-fit: cover;
