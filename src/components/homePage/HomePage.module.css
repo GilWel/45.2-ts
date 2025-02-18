@@ -2,8 +2,9 @@
 
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* Два столбца */
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* четыре столбца */
   gap: 10px; /* Промежуток между колонками */
+  padding: 50px;
 }
 
 
