@@ -3,6 +3,7 @@ import styles from './products.module.css'
 import { useEffect, useState } from "react";
 import ProductCard from "../productCard/ProductCard";
 
+
 export  interface IProduct {
   id: number;
   title: string;
@@ -18,18 +19,26 @@ export  interface IProduct {
 
 export default function Products(): JSX.Element {
   const [products, setProducts] = useState<IProduct[]>([]);
+  const [loader, setLoader] = useState<boolean>(false);
 
   async function getProducts(): Promise<void> {
+    setLoader(true);
     const res = await fetch("https://fakestoreapi.com/products");
     const data: IProduct[] = await res.json();
     setProducts(data);
+    setLoader(false);
   }
   useEffect(() => {
     getProducts();
   }, []);
 
   return (
-    <div className={styles.gridContainer}>
+ 
+    <div >
+      {loader ? (
+        <div className={styles.loader}>loader...🔃</div>
+      ) :(
+<div className={styles.gridContainer}>
         {products.map((product) => (
         <ProductCard
           key={product.id}
@@ -40,5 +49,8 @@ export default function Products(): JSX.Element {
         />
       ))}
     </div>
+    )}
+</div>
+
   );
 }
