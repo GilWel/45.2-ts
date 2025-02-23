@@ -4,11 +4,17 @@
 .primary {
     background-color: #6abbe7 ;
 }
+.primary:hover{
+    background-color: rgb(81, 94, 165);
+}
 .danger {
     background-color: #e0766f;
 }
 .disabled {
-    background-color: #ccc;
+    background-color: #556dda;
     cursor: not-allowed;
     color: rgb(124,124,124);
+}
+.danger:hover{
+    background-color: rgb(192, 124, 85);
 }

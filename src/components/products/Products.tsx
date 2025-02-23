@@ -1,10 +1,9 @@
-import styles from './products.module.css'
-
+import styles from "./products.module.css";
 import { useEffect, useState } from "react";
 import ProductCard from "../productCard/ProductCard";
+import Cart from "../cart/Cart";
 
-
-export  interface IProduct {
+export interface IProduct {
   id: number;
   title: string;
   price: number;
@@ -33,24 +32,26 @@ export default function Products(): JSX.Element {
   }, []);
 
   return (
- 
-    <div >
-      {loader ? (
-        <div className={styles.loader}>loader...🔃</div>
-      ) :(
-<div className={styles.gridContainer}>
-        {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          title={product.title}
-          image={product.image}
-          price={product.price}
-          id={product.id}
-        />
-      ))}
-    </div>
-    )}
-</div>
+    <>
+      <Cart />
 
+      <div>
+        {loader ? (
+          <div className={styles.loader}>loader...🔃</div>
+        ) : (
+          <div className={styles.gridContainer}>
+            {products.map((product) => (
+              <ProductCard
+                key={product.id}
+                title={product.title}
+                image={product.image}
+                price={product.price}
+                id={product.id}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   );
 }

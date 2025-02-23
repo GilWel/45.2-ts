@@ -7,7 +7,6 @@ import NoPage from "./components/noPage/NoPage";
 import LoginForm from "./components/loginForm/LoginForm";
 import HomePage from "./components/homePage/HomePage";
 import Feedback from "./components/Feedback/Feedback";
-// import ProfileCard from "./components/ProfileCard/ProfileCard";
 import Lesson03 from "./lessons/Lesson03/Lesson03";
 import Lesson04 from "./lessons/Lesson04/Lesson04";
 import Lesson06 from "./lessons/lesson06/Lesson06";
@@ -15,8 +14,6 @@ import Lesson07 from "./lessons/lesson07/Lesson07";
 import Lesson08 from "./lessons/Lesson08/Lesson08";
 import Lesson09 from "./lessons/lesson09/Lesson09";
 import Lesson02 from "./lessons/Lesson02/Lesson02";
-// import Lesson01 from "./lessons/Lesson01/Lesson01";
-// import Homework01 from "./components/Homework/Homework01/Homework01";
 import Homework02 from "./components/Homework/Homework02/Homework02";
 import Homework03 from "./components/Homework/Homework03/Homework03";
 import Homework04 from "./components/Homework/Homework04/Homework04";
@@ -31,16 +28,17 @@ import RegisterSchema from "./components/registerSchema/RegisterSchema";
 import LoginSchema from "./components/loginSchema/LoginSchema";
 import Lesson14 from "./lessons/Lesson14/Lesson14";
 import ProductPage from "./components/productPage/ProductPage";
-// import FetchFox from "./components/fetchFox/FetchFox";
-// import Lesson09 from './lessons/lesson09/Lesson09';
-// import ShowDate from './components/ShowDate/ShowDate
-// import Lesson08 from './lessons/Lesson08/Lesson08';
-// import SpaceMission from './spaceMission/SpaceMission';
-// import Lesson06 from './lessons/lesson06/Lesson06';
-// import Lesson07 from './lessons/lesson07/Lesson07';
+import { CartProvider } from "./context/CartContext";
+import Cart from "./components/cart/Cart";
+import Products from "./components/products/Products";
+import { FavoriteProvider } from "./components/favoritesContext/FavoritesContext";
+
 
 function App() {
   return (
+    // ! обернули все приложение в CartProvider с контекстом чтобы иметь доступ к данным корзины
+    <FavoriteProvider>
+    <CartProvider>
     <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -52,8 +50,6 @@ function App() {
           <Route path="spaceMission" element={<SpaceMission/>} />
           <Route path="counter" element={<Counter/>} />
           <Route path="showDate" element={<ShowDate/>} />
-          {/* <Route path="profileCard" element={<ProfileCard/>} /> */}
-          {/* <Route path="lesson01" element={<Lesson01/>} /> */}
           <Route path="lesson02" element={<Lesson02/>} />
           <Route path="lesson03" element={<Lesson03/>} />
           <Route path="lesson04" element={<Lesson04/>} />
@@ -67,25 +63,21 @@ function App() {
           <Route path="lesson13" element={<Lesson13/>} />
           <Route path="lesson14" element={<Lesson14/>} />
           <Route path="lesson14/:id" element={<ProductPage/>} />
-          {/* <Route path="Homework01" element={<Homework01/>} /> */}
           <Route path="Homework02" element={<Homework02/>} />
+          <Route path="Cart" element={<Cart/>} />
+          <Route path="Products" element={<Products/>} />
+          <Route path="Products/:id" element={<ProductPage/>} />
           <Route path="Homework03" element={<Homework03/>} />
           <Route path="Homework04" element={<Homework04/>} />
           <Route path="FormGender" element={<FormGender/>} />
           <Route path="RegisterSchema" element={<RegisterSchema/>} />
           <Route path="LoginSchema" element={<LoginSchema/>} />
           <Route path="*" element={<NoPage />} />
-
-          {/* <Lesson06/> */}
-          {/* <SpaceMission /> */}
-          {/* <Lesson08 /> */}
-          {/* <ShowDate /> */}
-          {/* <FetchFox /> */}
-          {/* <Lesson09 /> */}
-          {/* <Lesson07 /> */}
         </Route>
       </Routes>
     </HashRouter>
+    </CartProvider>
+    </FavoriteProvider>
   );
 }
 
