@@ -15,11 +15,7 @@ interface IStoreCardProps {
 
 export default function StoreCard({
   id,
-  title,
-  description,
-  price,
-  thumbnail,
-  stock,
+ 
   children
 }: IStoreCardProps): JSX.Element {
   return (
