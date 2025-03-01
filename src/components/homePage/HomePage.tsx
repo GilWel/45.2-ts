@@ -80,6 +80,15 @@ export default function HomePage() {
       <Link className={styles.linkActive} to={"LoginSchema"}>
         LoginSchema
       </Link>
+      <Link className={styles.linkActive} to={"Lesson16"}>
+        Lesson16
+      </Link>
+      <Link className={styles.linkActive} to={"Lesson15"}>
+        Lesson15
+      </Link>
+      <Link className={styles.linkActive} to={"Store"}>
+        Store
+      </Link>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./layout/Layout";
 import Lesson05 from "./lessons/Lesson05/Lesson05";
@@ -32,6 +32,9 @@ import { CartProvider } from "./context/CartContext";
 import Cart from "./components/cart/Cart";
 import Products from "./components/products/Products";
 import { FavoriteProvider } from "./components/favoritesContext/FavoritesContext";
+import Lesson16 from "./lessons/Lesson16/Lesson16";
+import Store from "./components/store/Store";
+import StorePage from "./components/storePage/StorePage";
 
 
 function App() {
@@ -67,11 +70,15 @@ function App() {
           <Route path="Cart" element={<Cart/>} />
           <Route path="Products" element={<Products/>} />
           <Route path="Products/:id" element={<ProductPage/>} />
+          <Route path="lesson15" element={<h2>На этом уроке мы создали <Link to='/products'>корзину для продуктов</Link> с помощью React Context 🛒</h2>} />
+          <Route path="Lesson16" element={<Lesson16/>} />
           <Route path="Homework03" element={<Homework03/>} />
           <Route path="Homework04" element={<Homework04/>} />
           <Route path="FormGender" element={<FormGender/>} />
           <Route path="RegisterSchema" element={<RegisterSchema/>} />
           <Route path="LoginSchema" element={<LoginSchema/>} />
+          <Route path="Store" element={<Store/>} />
+          <Route path="Store/:id" element={<StorePage/>} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
