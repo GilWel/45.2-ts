@@ -25,7 +25,7 @@ const schema = Yup.object({
 export default function Store(): JSX.Element {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [loader, setLoader] = useState<boolean>(false);
-  const [limit, setLimit] = useState<number>(0);
+  // const [limit, setLimit] = useState<number>(0);
 
   async function getProducts(): Promise<void> {
     setLoader(true);
