@@ -2,14 +2,20 @@ import { NavLink, Outlet } from "react-router-dom";
 import styles from "./Layout.module.css";
 import { useCart } from "../context/CartContext";
 import { getTotalPrice } from "../components/cart/Cart"
+import { useState } from "react";
 
 
 export default function Layout() {
+
   const{cart} =useCart();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => { setMenuOpen((prev) => !prev);}
   return (
     <>
       <header className={styles.header}>
-        <nav>
+      <div className={styles.burger_icon} onClick={toggleMenu}> ☰ </div>
+        <nav className={`${styles.nav_menu} ${menuOpen ? styles.showMenu : ''}`}>
+
         <NavLink className={({ isActive }) => (isActive ? styles.linkActive : "")}
           to={"/"}
         >

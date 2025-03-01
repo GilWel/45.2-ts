@@ -8,27 +8,32 @@
   background-color: rgb(240, 191, 99);
   gap: 15px;
   padding: 10px 50px;
- 
-
 }
-.header nav{
+.nav_menu {
+  display: none; 
+  transition: all 0.3s ease-in-out;
+}
+.showMenu {
+  display: block;        
+}
+.burger_icon {
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+}
+.header nav {
   display: flex;
   gap: 15px;
-
 }
-.header span{
-
+.header span {
   color: rgb(72, 14, 148);
-
 }
 
 .header a {
   color: white;
-  
 }
 .header a:hover {
   text-decoration: underline;
-  
 }
 .home {
   font: optional;
@@ -41,7 +46,7 @@
 
 .main {
   width: 100%;
-   flex: 1;
+  flex: 1;
 }
 
 .footer {
@@ -50,4 +55,24 @@
   height: 40 px;
   width: 100%;
   background-color: darkgrey;
+}
+@media (max-width: 768px) {
+  .burger_icon {
+    display: block; /* Показываем иконку бургера на маленьких экранах */
+  }
+
+  .nav_menu {
+    display: none; /* Скрываем меню по умолчанию на мобильных */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .nav_menu.showMenu {
+    display: flex; /* Показываем меню, когда иконка бургера нажата */
+  }
 }
